@@ -1,0 +1,1 @@
+First simple backend I do for one of my projects. Allows the user to upload, update, and remove pokemons from a database. Done with Node.js, Express and Mongodb. Frontend repo can be found at ( https://github.com/harushishi/Pokedex-Frontend ).
