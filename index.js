@@ -3,14 +3,12 @@ const express = require('express')
 const app = express()
 const morgan = require('morgan')
 const cors = require('cors')
+
 // mongodb setup, now in pokemon.js and .env //
 const Pokemon = require('./models/pokemon')
 //                                          //
 app.use(cors())
-//basic gets//
-app.get('/', (request, response) => {
-    response.send('<h1>Working! Landing page</h1>')
-})
+
 //show all pokemons
 app.get('/api/pokemons', (request, response) => {
     Pokemon.find({}).then(pokemons => {

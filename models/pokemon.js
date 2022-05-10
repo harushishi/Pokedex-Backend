@@ -1,10 +1,11 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-const url = process.env.MONGODB_URI
+const MONGODB_URL = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PW}@cluster0.n1smb.mongodb.net/pokedex?retryWrites=true&w=majority`
 
-console.log('connecting to', url)
+console.log('connecting to', MONGODB_URL)
 
-mongoose.connect(url)
+mongoose.connect(MONGODB_URL)
     .then(result => {
         console.log('connected to MongoDB')
     })
